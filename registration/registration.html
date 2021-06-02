@@ -4,6 +4,7 @@
 <head>
     <title>STUDENT REGISTRATION FORM</title>
     <style>
+        <!-- CSS Styling of all the text elements , styling their width,background colours and borders accordingly -->
         input[type=text] {
             width: 100%;
             padding: 10px 0;
@@ -17,14 +18,15 @@
             transition: border-color .2s;
 
         }
-
+        <!-- Style all the placeholders present using Grey colour -->
         input[type=text]::placeholder {
             color: #666;
         }
-
-        input[type=text]:focus {
+        <!-- Style the focussed text field using a light shade of Grey colour -->
+            input[type=text]:focus {
             border-bottom-color: #ddd;
         }
+         <!-- Styling the e-mail field by specifying width,padding,background,font and other necessary styling elements -->
 
         input[type=email] {
             width: 100%;
@@ -37,11 +39,12 @@
             outline: none;
             transition: border-color .2s;
         }
-
-
-        input[type=email]::placeholder {
+        <!-- Style the e-mail placeholder present using Grey colour -->
+        
+            input[type=email]::placeholder {
             color: #666;
         }
+        <!-- Style the focussed e-mail field using a light shade of  Grey colour -->
 
         input[type=email]:focus {
             border-bottom-color: #ddd;
@@ -49,7 +52,7 @@
 
 
 
-        /*Buttons*/
+        <!-- Styling of the Buttons -->
         input[type=submit],
         input[type=reset] {
             background-color: #4d4d4d;
@@ -61,18 +64,18 @@
             cursor: pointer;
             border-radius: 5px;
         }
-
+        <!-- This selector is used to style element when mouse hover over the submit button -->
         input[type=submit]:hover {
             color: black;
 
         }
-
+         <!-- This selector is used to style element when mouse hover over the reset button -->
         input[type=reset]:hover {
             color: black;
 
         }
 
-
+         <!-- Used to style the date dropdown using background color, radius and border -->
         input[type=date] {
             border: 1px solid #666;
             background-color: #666;
@@ -80,14 +83,14 @@
             padding: 4px 8px;
 
         }
-
+         <!-- Used to style the upload file option -->
         input[type=file] {
             border: 1px solid #666;
             background-color: #666;
             border-radius: 7px;
             padding: 5px;
         }
-
+        <!-- Used to style the number dropdown using background color, radius and border -->
         input[type=number] {
             border: 1px solid #666;
             background-color: #666;
@@ -100,7 +103,7 @@
         }
 
 
-
+        <!-- Used to style the outer major table inside which the form is present -->
 
         #table1 {
             border-radius: 25px;
@@ -110,7 +113,7 @@
             height: 500px;
             
         }
-
+        <!-- Used to style the inner minor table consisting of events -->
         #table2 {
             background:rgb(0, 0, 204,0.1);
             padding: 20px;
@@ -158,13 +161,15 @@
         }
     </style>
 </head>
-
+    
+<!-- Added background image to the form -->
 <body style="background-image: url('https://wallpapercave.com/wp/wp3102516.jpg');">
+    <!-- Use of marquee tag to enable scrolling the logo image horizontally from right to left -->
     <marquee scrollamount="10"><img src="Reminiscence.png"></marquee> 
     <center>
-
+        <!-- mailto action to send the form data to organiser's email on submission -->
         <form action="mailto:pranavmahesh2k2@gmail.com" method="POST">
-            <!--<h2><u style="color:black">STUDENT REGISTRATION FORM</u></h2>-->
+            <!-- Creation of a table to incorporate the form into for better look and proper alignment -->
             <table id="table1" bgcolor="white">
                 <tr>
                     <td colspan="3">
@@ -172,37 +177,51 @@
                     </td>
                 </tr>
                 <tr>
+                    <!-- Text box to enter the first name -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>FIRST NAME:</td>
                     <td><input style="color: black;" type="text" name="fname" placeholder="First Name" required >(max 30 character a-z or A-Z)</td>
 
                 </tr>
                 <tr>
+                    <!-- Text box to enter the last name -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>LAST NAME:</td>
                     <td><input style="color: black;" type="text" name="lname" placeholder="Last Name">(max 30 character a-z or A-Z)</td>
                 </tr>
                 <tr>
+                    <!-- Creation of date element that defines a date picker for the user to enter his dob -->
+                    <!-- Min and Max attribute are used as constraints to limit the user from entering dob only within the given range -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>DATE OF BIRTH:</td>
                     <td><input style="color: black;" type="date" name="date" min="01-04-1998" max="01-04-2020"></td>
                 </tr>
                 <tr>
+                    <!-- Email field to enter the e-mail id -->
+                    <!-- Required attribute is added which specifies that this must be filled before submission of the form -->
+                    <!-- Bogus e-mail id will not be accepted as required attribute will alert the user on entering a wrong format for email -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>EMAIL ID:</td>
                     <td><input style="color: black;" type="email" name="Email_ID" placeholder=EMAIL required></td>
                 </tr>
                 <tr>
+                    <!-- Text box to enter the phone number -->
+                    <!-- Placeholder is provided which prompts the user to enter 10-digit mobile number -->
+                    <!-- Required attribute is added which specifies that this must be filled before submission of the form -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>MOBILE NUMBER:</td>
                     <td><input style="color: black;" type="text" name="phone_no" placeholder="10 digits number" required></td>
                 </tr>
                 <tr>
+                    <!-- Text box to enter the name of the college -->
+                    <!-- Required attribute is added which specifies that this must be filled before submission of the form -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>COLLEGE NAME:</td>
                     <td><input style="color: black;" type="text" name="college" required></td>
                 </tr>
                 <tr>
+                    <!-- Creation of radiobutton to enter the gender, the user would only be able to select any one of the options -->
+                    <!-- nbsp refers to non-breaking space which creates spaces without breaking into a newline -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>GENDER:</td>
                     <td style="color: black;"><input type="radio" name="gender" value="male">&nbsp;&nbsp; MALE &nbsp;&nbsp;
@@ -212,21 +231,26 @@
                     
                 </tr>
                 <tr>
+                    <!-- Creation of a file element which prompts the user to upload a photo -->
+                    <!-- Allows user to browse through his system to upload a file -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>UPLOAD PHOTO:</td>
                     <td><input type="file" name="photo" required></td>
                 </tr>
                 <tr>
+                    <!-- Text box to enter the city the user lives in -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>CITY:</td>
                     <td><input style="color: black;" type="text" name="city"></td>
                 </tr>
                 <tr>
+                    <!-- Text box to enter the pincode of the area the user lives in -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>PIN CODE:</td>
                     <td><input style="color: black;" type="text" name="pin_code"></td>
                 </tr>
                 <tr>
+                    <!-- Creation of a Dropdown to select the state name -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>STATE:</td>
                     <td><select id="dropdown" name="state">
@@ -238,20 +262,24 @@
                         </select></td>
                 </tr>
                 <tr>
+                    <!-- Text box which shows the country name, set as read only to India, hence cannot be edited -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>COUNTRY:</td>
                     <td><input style="color: black;" type="text" name="country" value="India" readonly="readonly"></td>
                 </tr>
 
                 <tr>
+                    <!-- Nested table for effective display of the events available -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>EVENTS:</td>
                     <td>
                         <table id="table2">
 
                             <tr>
+                                <!-- 1st row of the table that shows the available events -->
                                 <td>1</td>
                                 <td>Fun Fair</td>
+                                <!-- Creation of checkboxes to enable the user to select multiple events of his choice -->
                                 <td> <input type="checkbox" id="shipwreck" name="shipwreck" value="shipwreck">
                                     <label for="vehicle1"> Shipwreck </label><br>
                                 </td>
@@ -265,8 +293,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <!-- 2nd row of the table that shows the available events -->
                                 <td>2</td>
                                 <td>Theatrics</td>
+                                <!-- Creation of checkboxes to enable the user to select multiple events of his choice -->
                                 <td><input type="checkbox" id="movierev" name="movierev" value="movierev">
                                     <label for="vehicle1">Movie Review</label><br>
                                 </td>
@@ -281,8 +311,11 @@
                     </td>
                 </tr>
                 <tr>
+                    <!-- Special team events for the user to choose from -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>SPECIAL TEAM EVENTS:</td>
+                     <!-- Creation of radiobuttons to enable the user to select any one button of his choice -->
+                     <!-- nbsp is a non-breaking space without breaking into a new line -->
                     <td style="color:black;"><input type="radio" name="course"> &nbsp;&nbsp; ADZAP &nbsp;&nbsp;
                         <input type="radio" name="course"> &nbsp;&nbsp; BAND &nbsp;&nbsp;
                         <input type="radio" name="course"> &nbsp;&nbsp; FIFA &nbsp;&nbsp;
@@ -290,17 +323,20 @@
                 </tr>
 
                 <tr>
+                    <!-- Text box to enter the team name, placeholder provided for user to enter accordingly -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>TEAM NAME:</td>
                     <td><input style="color: black;" type="text" name="tname" placeholder="Team Name"></td>
                 </tr>
 
                 <tr>
+                    <!-- Text box to enter the name of the team leader, placeholder provided for user hint -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>TEAM LEADER:</td>
                     <td><input style="color: black;" type="text" name="tleader" placeholder="Team Leader"></td>
                 </tr>
                 <tr>
+                    <!-- Number field to enter the number of team number, minimum and maximum number constraint is placed using min and max -->
                     <td style="width:12px;"></td>
                     <td id='c1'>NO. OF TEAM MEMBERS:</td>
                     <td><label for="tmembers"></label>
@@ -308,9 +344,11 @@
                     </td>
                 </tr>
                 <tr>
+                    <!-- Creation of an unordered list for entering the list of team members sequentially -->
                     <td style="width:12px;"> </td>
                     <td id='c1'>TEAM MEMBERS:</td>
                     <td>
+                       
                         <ul>
                             <li><input style="color: black;" type="text" name="member1" placeholder="Member 1"></li>
                             <li><input style="color: black;" type="text" name="member2" placeholder="Member 2"></li>
@@ -322,6 +360,8 @@
                     </td>
                 </tr>
             </table><br>
+            
+            <!-- Insertion of submit and reset button, onlick alert message to alert the user on submission of the form -->
             <div>
                 <input type="submit" name="submit" onclick="alert('The form has been submitted!')">
                 <input type="reset" name="reset">
